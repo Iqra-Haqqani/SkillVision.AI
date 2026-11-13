@@ -79,7 +79,7 @@ const KB={
 "Islamiyat Teacher":{s:[["Quran and Hadith",3],["Fiqh",3],["Lesson planning",3],["Classroom management",2],["Public speaking",2],["Arabic",2],["Digital tools",1],["Communication",1]],r:["University library","Canva for Education"]},
 "Islamic Researcher / Writer":{s:[["Research methods",3],["Academic writing",3],["Islamic sources",3],["Arabic",2],["Citation",2],["Editing",2],["SEO basics",1],["Critical thinking",1]],r:["Google Scholar","Zotero (free)"]}
 };
-const AI_URL="PASTE_YOUR_WORKER_URL_HERE";
+const AI_URL="tight-meadow-74d3.iqrahaqqani777.workers.dev";
 const viaWorker=(()=>{
  const call=async p=>{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:p})});if(!r.ok)throw {code:"http_"+r.status};const d=await r.json();return d.text||""};
  const f=async(p,o)=>{const t=await call(p);if(o&&o.onText)o.onText({text:t});return {text:t}};
