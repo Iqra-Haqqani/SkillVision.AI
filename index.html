@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SkillVision AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--card:#fffdf8;--tx:#1f2a2e;--mu:#667074;--pr:#0f5c5c;--ac:#e8643c;--bd:#e3dbc9;--soft:#efe7d6;--ok:#2f7d4f;--bad:#c2452d;--serif:"Fraunces",Georgia,serif;--sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101c1b;--card:#172827;--tx:#f1ece0;--mu:#9fb0ad;--pr:#5fc7b8;--ac:#ff8a62;--bd:#2a4140;--soft:#1f3633;--ok:#6fd59a;--bad:#ff8f7a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101c1b;--card:#172827;--tx:#f1ece0;--mu:#9fb0ad;--pr:#5fc7b8;--ac:#ff8a62;--bd:#2a4140;--soft:#1f3633;--ok:#6fd59a;--bad:#ff8f7a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg) radial-gradient(circle at 95% -5%,var(--soft),transparent 45%);color:var(--tx);font-family:var(--sans);line-height:1.55}
+main{max-width:780px;margin:0 auto;padding:22px 16px 56px}
+.hero{display:flex;align-items:center;gap:16px;padding:14px 0 26px}.hero>div{flex:1}.hero svg{width:150px;flex:none}
+.eye{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);font-weight:700}
+h1{font-family:var(--serif);font-size:clamp(34px,8vw,52px);line-height:1.02;margin:6px 0 12px;font-weight:800}h1 em{color:var(--pr);font-style:italic}
+.sub{color:var(--mu);margin:0;max-width:460px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:22px;margin-bottom:16px;box-shadow:0 18px 32px -26px rgba(31,42,46,.45)}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.n{width:28px;height:28px;border-radius:50%;background:var(--pr);color:var(--card);display:inline-grid;place-items:center;font:700 14px var(--sans);flex:none}
+input,select,textarea,button{font:inherit;width:100%}
+input,select,textarea{border:1.5px solid var(--bd);border-radius:12px;padding:11px 13px;background:var(--bg);color:var(--tx)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pr);box-shadow:0 0 0 3px var(--soft)}
+textarea{min-height:80px;resize:vertical}
+button{background:var(--ac);color:#fff;border:0;border-radius:999px;padding:12px 22px;cursor:pointer;font-weight:700;margin-top:12px;transition:transform .15s,box-shadow .15s;box-shadow:0 8px 16px -10px var(--ac)}
+button:hover{transform:translateY(-2px)}
+button.alt{background:transparent;color:var(--pr);border:1.5px solid var(--pr);box-shadow:none}
+.row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}.row>*{flex:1;min-width:120px}.row button{margin-top:0;flex:0 0 auto;width:auto}
+label.l{display:block;margin:12px 0 5px;font-weight:700;font-size:13px;color:var(--mu)}
+.tag{display:inline-block;padding:4px 12px;border-radius:999px;font-size:13px;margin:3px 4px 3px 0;background:var(--soft)}
+.tag.m{background:rgba(47,125,79,.15);color:var(--ok)}.tag.x{background:rgba(194,69,45,.13);color:var(--bad)}
+.chip{cursor:pointer}.m{color:var(--ok)}.x{color:var(--bad)}.hide{display:none}
+.top{display:flex;gap:20px;align-items:center;margin:6px 0 12px}.car{font-family:var(--serif);font-size:20px}
+.ring{position:relative;width:118px;height:118px;flex:none}.ring svg{width:100%;transform:rotate(-90deg)}
+.rb{fill:none;stroke:var(--soft);stroke-width:12}.rf{fill:none;stroke:var(--ac);stroke-width:12;stroke-linecap:round}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:800 28px var(--serif)}
+.big{font:800 40px var(--serif);color:var(--ac)}
+.wk{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:12px 0;border-top:1px dashed var(--bd)}.wk b{font-family:var(--serif);color:var(--pr)}
+.q{margin:14px 0}.q label{display:block;padding:6px 10px;border-radius:10px;cursor:pointer}.q label:hover{background:var(--soft)}.q input{width:auto;margin-right:8px}
+.msg{padding:10px 14px;border-radius:16px;margin:8px 0;white-space:pre-wrap;max-width:88%}.u{background:var(--pr);color:var(--card);margin-left:auto}.a{background:var(--soft)}
+small{color:var(--mu)}
+@media(max-width:520px){.hero svg{display:none}.top{flex-direction:column;align-items:flex-start}}
+</style></head><body><main>
+<div class="hero"><div><div class="eye">SkillVision AI</div><h1>Find the gap.<br><em>Build the path.</em></h1><p class="sub">Pick any career, tell us what you know, and get a roadmap that fits your time.</p></div>
+<svg viewBox="0 0 160 120" fill="none" aria-hidden="true"><path d="M14 104C50 104 40 62 76 62S104 28 128 22" stroke="currentColor" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" style="color:var(--pr)"/><circle cx="14" cy="104" r="8" fill="var(--pr)"/><circle cx="76" cy="62" r="6" fill="var(--ac)"/><path d="M128 40V10l24 8-24 8" fill="var(--ac)" stroke="var(--ac)" stroke-width="3" stroke-linejoin="round"/></svg></div>
+
+<div class="card"><h2><span class="n">1</span>Your target career</h2>
+<input id="career" list="cl" placeholder="Type any career, e.g. Data Analyst, Lawyer, Teacher, Pilot">
+<datalist id="cl"></datalist>
+<small>Careers in the built-in list use a fixed knowledge base. Any other career is generated by AI, so please double-check it.</small></div>
+
+<div class="card"><h2><span class="n">2</span>Your skills</h2>
+<label class="l">Add skills manually</label>
+<div class="row"><input id="sk" placeholder="e.g. Python, Public speaking"><button id="add">Add</button></div>
+<div id="chips" style="margin-top:8px"></div>
+<label class="l">Or paste your CV text (optional)</label>
+<textarea id="cv" placeholder="Paste CV text here…"></textarea>
+<small>Manual skills and CV are both counted.</small></div>
+
+<div class="card"><h2><span class="n">3</span>Your time</h2>
+<div class="row"><div><label class="l">Hours per day</label><input id="hr" type="number" min="0.5" max="12" step="0.5" value="2"></div>
+<div><label class="l">Days per week</label><select id="dy"><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option></select></div></div>
+<button id="go">Analyze my skill gap</button></div>
+
+<div id="rep" class="card hide"></div>
+<div id="road" class="card hide"></div>
+<div id="qz" class="card hide"></div>
+<div id="chat" class="card hide"><h2><span class="n">?</span>Ask SkillVision</h2><div id="log"></div>
+<div class="row"><input id="qi" placeholder="Ask anything about your gap, roadmap or career…"><button id="qs">Send</button></div></div>
+<p><small>Match % is an estimate. Hours and resources are suggestions; please verify them yourself.</small></p>
+</main>
+<script>
+const H=w=>({3:20,2:12,1:6})[w]||10;
+const KB={
+"Web Developer":{s:[["HTML",3],["CSS",3],["JavaScript",3],["React",2],["Git",2],["Responsive design",2],["APIs",2],["Teamwork",1]],r:["freeCodeCamp","MDN Web Docs","The Odin Project"]},
+"Cybersecurity Analyst":{s:[["Networking",3],["Linux",3],["Security fundamentals",3],["Python",2],["Cryptography",2],["Ethical hacking",2],["Incident response",2],["Report writing",1]],r:["TryHackMe (free rooms)","Cisco Networking Academy"]},
+"Data Analyst":{s:[["Excel",3],["Statistics",3],["SQL",3],["Power BI",2],["Python",2],["Data cleaning",2],["Report writing",2],["Critical thinking",1]],r:["Kaggle Learn","Khan Academy Statistics"]},
+"Financial Analyst":{s:[["Accounting",3],["Financial modeling",3],["Excel",3],["Economic theory",2],["Forecasting",2],["Risk analysis",2],["Presentation",1],["Communication",1]],r:["Khan Academy Finance","Investopedia"]},
+"Islamiyat Teacher":{s:[["Quran and Hadith",3],["Fiqh",3],["Lesson planning",3],["Classroom management",2],["Public speaking",2],["Arabic",2],["Digital tools",1],["Communication",1]],r:["University library","Canva for Education"]},
+"Islamic Researcher / Writer":{s:[["Research methods",3],["Academic writing",3],["Islamic sources",3],["Arabic",2],["Citation",2],["Editing",2],["SEO basics",1],["Critical thinking",1]],r:["Google Scholar","Zotero (free)"]}
+};
+const AI_URL="PASTE_YOUR_WORKER_URL_HERE";
+const viaWorker=(()=>{
+ const call=async p=>{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:p})});if(!r.ok)throw {code:"http_"+r.status};const d=await r.json();return d.text||""};
+ const f=async(p,o)=>{const t=await call(p);if(o&&o.onText)o.onText({text:t});return {text:t}};
+ f.json=async p=>JSON.parse((await call(p+"\nReturn ONLY valid JSON, no markdown fences.")).replace(/```json|```/g,"").trim());
+ return f})();
+const getSample=async()=>{try{if(typeof claude!=="undefined")return await claude.use("sample")}catch(e){}return AI_URL.startsWith("http")?viaWorker:null};
+const $=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+Object.keys(KB).forEach(k=>$("cl").appendChild(new Option(k)));
+let mine=[],S={},miss=[],qs=[],hist=[];
+function chips(){$("chips").innerHTML=mine.map((s,i)=>`<span class="tag chip" data-i="${i}">${esc(s)} ✕</span>`).join("");$("chips").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{mine.splice(+c.dataset.i,1);chips()})}
+function addSk(){$("sk").value.split(",").map(s=>s.trim()).filter(s=>s&&!mine.includes(s)).forEach(s=>mine.push(s));$("sk").value="";chips()}
+$("add").onclick=addSk;$("sk").onkeydown=e=>{if(e.key==="Enter")addSk()};
+function plan(order,note){
+ const cap=Math.max(0.5,(+$("hr").value||1)*(+$("dy").value||5));
+ const wk=[];let w=[],left=cap;
+ order.forEach(([n,,h])=>{let rem=h;while(rem>0){const t=Math.min(rem,left);w.push(esc(n)+" ("+Math.round(t*10)/10+"h)");rem-=t;left-=t;if(left<=0.001){wk.push(w);w=[];left=cap}}});
+ if(w.length)wk.push(w);
+ const tot=order.reduce((a,s)=>a+s[2],0);
+ $("road").classList.remove("hide");
+ $("road").innerHTML=`<h2>Your roadmap: about ${wk.length} week${wk.length==1?"":"s"}</h2><p><small>${tot} study hours in total at ${$("hr").value}h/day, ${$("dy").value} days/week (${cap}h per week).</small></p>${note?`<p>${esc(note)}</p>`:""}`+
+ (wk.length?wk.map((a,i)=>`<div class="wk"><b>Week ${i+1}</b><span>${a.join(" · ")}</span></div>`).join(""):"<p>Nothing to learn. You match this career!</p>")+
+ `<p><small>Resources: ${(S.res||[]).map(esc).join(" · ")}</small></p><button class="alt" id="rb">Rebuild with new hours</button>`;
+ $("rb").onclick=()=>plan(order,note);
+}
+$("go").onclick=async()=>{
+ const name=$("career").value.trim(),cv=$("cv").value.trim();
+ if(!name)return alert("Please enter a career.");
+ if(!mine.length&&!cv)return alert("Please add some skills or paste your CV.");
+ const sm=await getSample();
+ const key=Object.keys(KB).find(k=>k.toLowerCase()===name.toLowerCase());
+ $("rep").classList.remove("hide");$("rep").innerHTML="<p>Analyzing…</p>";
+ try{
+  if(key){S={career:key,skills:KB[key].s.map(([n,w])=>[n,w,H(w)]),res:KB[key].r,ai:false}}
+  else{
+   if(!sm)return $("rep").innerHTML="<p>AI is not available in this view, so only the built-in careers work here.</p>";
+   const r=await sm.json(`List the 8 to 10 most important skills needed to become a ${name}. Return ONLY JSON: {"skills":[{"name":"","weight":1-3 (3=essential),"hours":estimated beginner study hours}],"resources":["3 well-known free learning resources by name"]}`,{cache:false});
+   S={career:name,skills:r.skills.map(x=>[x.name,Math.min(3,Math.max(1,+x.weight||2)),Math.max(2,+x.hours||H(x.weight))]),res:r.resources||[],ai:true};
+  }
+  const info=mine.join(", ")+"\n"+cv;let ok=[];
+  if(sm){ok=await sm.json(`Required skills (numbered from 0): ${JSON.stringify(S.skills.map(s=>s[0]))}. Student skills and CV: ${info}. Return ONLY a JSON array with the indexes of required skills the student clearly already has (treat abbreviations and close synonyms as a match).`,{cache:false})}
+  else ok=S.skills.map((s,i)=>info.toLowerCase().includes(s[0].toLowerCase())?i:-1).filter(i=>i>=0);
+  let tot=0,got=0;const have=[];miss=[];
+  S.skills.forEach((s,i)=>{tot+=s[1];if(ok.includes(i)){got+=s[1];have.push(s[0])}else miss.push(s)});
+  miss.sort((a,b)=>b[1]-a[1]);S.have=have;
+  const p=Math.round(got/tot*100);S.p=p;
+  $("rep").innerHTML=`<h2>Skill gap report</h2>${S.ai?"<small>Skills for this career were generated by AI. Please verify them.</small>":""}<div class="top"><div class="ring"><svg viewBox="0 0 120 120"><circle class="rb" cx="60" cy="60" r="52"/><circle class="rf" cx="60" cy="60" r="52" style="stroke-dasharray:${(p*3.267).toFixed(1)} 327"/></svg><b>${p}%</b></div><div><div class="car">${esc(S.career)}</div><small>Match % = matched weight (${got}) / total weight (${tot}) × 100</small></div></div>
+  <p><b class="m">Matched:</b><br>${have.map(s=>`<span class="tag m">${esc(s)}</span>`).join("")||"None yet"}</p>
+  <p><b class="x">Missing (high priority first):</b><br>${miss.map(s=>`<span class="tag x">${esc(s[0])} (${s[1]})</span>`).join("")||"Nothing missing!"}</p>
+  <p><b>Weak areas:</b> ${esc(miss.filter(s=>s[1]==3).map(s=>s[0]).join(", ")||"No high-weight gaps")}</p>
+  <button class="alt" id="qb">Test my skill level (AI quiz)</button>`;
+  $("qb").onclick=quiz;plan(miss);
+  $("chat").classList.remove("hide");hist=[];$("log").innerHTML="";
+  $("rep").scrollIntoView({behavior:"smooth"});
+ }catch(e){$("rep").innerHTML="<p>Something went wrong ("+esc(e.code||e.message||"error")+"). Please try again.</p>"}
+};
+async function quiz(){
+ const sm=await getSample();$("qz").classList.remove("hide");
+ if(!sm||!miss.length){$("qz").innerHTML="<p>"+(miss.length?"The AI quiz is not available in this view.":"No missing skills to test. Well done!")+"</p>";return}
+ $("qz").innerHTML="<p>Preparing your quiz…</p>";
+ try{
+  qs=await sm.json(`Create exactly 5 beginner-level multiple-choice questions for a student aiming to become a ${S.career}. Cover these skills: ${miss.slice(0,5).map(s=>s[0]).join(", ")}. Return ONLY a JSON array like [{"skill":"one of the listed skills","q":"question","options":["a","b","c","d"],"answer":0}] where answer is the index of the correct option.`,{cache:false});
+  $("qz").innerHTML="<h2>Skill quiz</h2>"+qs.map((q,i)=>`<div class="q"><b>${i+1}. ${esc(q.q)}</b><br><small>${esc(q.skill)}</small>${q.options.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${esc(o)}</label>`).join("")}</div>`).join("")+`<button id="sub">Submit quiz</button><div id="res"></div>`;
+  $("sub").onclick=submit;
+ }catch(e){$("qz").innerHTML="<p>Quiz could not be created. Please try again.</p>"}
+}
+function submit(){
+ let sc=0,weak=[];
+ qs.forEach((q,i)=>{const v=document.querySelector(`input[name=q${i}]:checked`);if(v&&+v.value===q.answer)sc++;else weak.push(q.skill)});
+ const wl=[...new Set(weak)];
+ const order=[...miss.filter(s=>wl.includes(s[0])),...miss.filter(s=>!wl.includes(s[0]))];
+ S.quiz=sc+"/5, weak in: "+(wl.join(", ")||"none");
+ $("res").innerHTML=`<p class="big">${sc}/5</p><p>${sc>=4?"Strong result! Roadmap shortened.":sc>=2?"Good start. Weak areas now come first.":"Keep going! The roadmap now starts from your weak areas."}</p><p><b>Weak areas:</b> ${esc(wl.join(", ")||"None")}</p>`;
+ plan(sc>=4?order.slice(0,4):order,`Updated after your quiz score of ${sc}/5.`);
+}
+async function ask(){
+ const q=$("qi").value.trim();if(!q)return;
+ const sm=await getSample();if(!sm){$("log").innerHTML+=`<div class="msg a">The AI is not connected in this copy. Set AI_URL in index.html (see README).</div>`;return}
+ $("qi").value="";$("log").innerHTML+=`<div class="msg u">${esc(q)}</div>`;
+ const box=document.createElement("div");box.className="msg a";box.textContent="Thinking…";$("log").appendChild(box);
+ const ctx=`You are SkillVision AI, a friendly career coach for students. Student profile: target career ${S.career}; match ${S.p}%; skills they have: ${S.have.join(", ")||"none"}; missing: ${miss.map(s=>s[0]).join(", ")||"none"}; study time ${$("hr").value}h/day, ${$("dy").value} days/week; quiz: ${S.quiz||"not taken"}. Answer simply and personally in at most 150 words. Say clearly if you are unsure.`;
+ try{const r=await sm(ctx+"\n\nConversation so far:\n"+hist.slice(-6).join("\n")+"\n\nStudent: "+q,{cache:false,onText:t=>{box.textContent=t.text}});box.textContent=r.text;hist.push("Student: "+q,"Coach: "+r.text)}
+ catch(e){box.textContent="Sorry, I could not answer. Please try again."}
+}
+$("qs").onclick=ask;$("qi").onkeydown=e=>{if(e.key==="Enter")ask()};
+</script></body></html>
